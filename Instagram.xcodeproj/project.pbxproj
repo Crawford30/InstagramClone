@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE8B22282694BC9400E227DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22272694BC9400E227DD /* AppDelegate.swift */; };
 		EE8B222A2694BC9400E227DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22292694BC9400E227DD /* SceneDelegate.swift */; };
-		EE8B222C2694BC9400E227DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B222B2694BC9400E227DD /* ViewController.swift */; };
+		EE8B222C2694BC9400E227DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B222B2694BC9400E227DD /* HomeViewController.swift */; };
 		EE8B222F2694BC9400E227DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8B222D2694BC9400E227DD /* Main.storyboard */; };
 		EE8B22312694BCA300E227DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8B22302694BCA300E227DD /* Assets.xcassets */; };
 		EE8B22342694BCA300E227DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8B22322694BCA300E227DD /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		EE8B22242694BC9400E227DD /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8B22272694BC9400E227DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8B22292694BC9400E227DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE8B222B2694BC9400E227DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE8B222B2694BC9400E227DD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE8B222E2694BC9400E227DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE8B22302694BCA300E227DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE8B22332694BCA300E227DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,10 @@
 		EE8B22262694BC9400E227DD /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				EE8B223E2694BDFF00E227DD /* Resources */,
 				EE8B223D2694BDC600E227DD /* Models */,
 				EE8B223C2694BD6200E227DD /* Views */,
 				EE8B223B2694BD3400E227DD /* Controllers */,
-				EE8B22272694BC9400E227DD /* AppDelegate.swift */,
-				EE8B22292694BC9400E227DD /* SceneDelegate.swift */,
-				EE8B222B2694BC9400E227DD /* ViewController.swift */,
-				EE8B222D2694BC9400E227DD /* Main.storyboard */,
-				EE8B22302694BCA300E227DD /* Assets.xcassets */,
-				EE8B22322694BCA300E227DD /* LaunchScreen.storyboard */,
 				EE8B22352694BCA300E227DD /* Info.plist */,
 			);
 			path = Instagram;
@@ -73,6 +68,7 @@
 		EE8B223B2694BD3400E227DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE8B222B2694BC9400E227DD /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -80,6 +76,8 @@
 		EE8B223C2694BD6200E227DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE8B223F2694BEF500E227DD /* Storyboards */,
+				EE8B22302694BCA300E227DD /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +87,24 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8B223E2694BDFF00E227DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B22272694BC9400E227DD /* AppDelegate.swift */,
+				EE8B22292694BC9400E227DD /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE8B223F2694BEF500E227DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EE8B222D2694BC9400E227DD /* Main.storyboard */,
+				EE8B22322694BCA300E227DD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE8B222C2694BC9400E227DD /* ViewController.swift in Sources */,
+				EE8B222C2694BC9400E227DD /* HomeViewController.swift in Sources */,
 				EE8B22282694BC9400E227DD /* AppDelegate.swift in Sources */,
 				EE8B222A2694BC9400E227DD /* SceneDelegate.swift in Sources */,
 			);
