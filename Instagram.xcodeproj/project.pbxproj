@@ -56,6 +56,9 @@
 		EE8B22262694BC9400E227DD /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				EE8B223D2694BDC600E227DD /* Models */,
+				EE8B223C2694BD6200E227DD /* Views */,
+				EE8B223B2694BD3400E227DD /* Controllers */,
 				EE8B22272694BC9400E227DD /* AppDelegate.swift */,
 				EE8B22292694BC9400E227DD /* SceneDelegate.swift */,
 				EE8B222B2694BC9400E227DD /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				EE8B22352694BCA300E227DD /* Info.plist */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		EE8B223B2694BD3400E227DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8B223C2694BD6200E227DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8B223D2694BDC600E227DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
