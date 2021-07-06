@@ -13,6 +13,10 @@
 		EE8B222F2694BC9400E227DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8B222D2694BC9400E227DD /* Main.storyboard */; };
 		EE8B22312694BCA300E227DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8B22302694BCA300E227DD /* Assets.xcassets */; };
 		EE8B22342694BCA300E227DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8B22322694BCA300E227DD /* LaunchScreen.storyboard */; };
+		EE8B22412694C17900E227DD /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22402694C17900E227DD /* ExploreViewController.swift */; };
+		EE8B22432694C1C200E227DD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22422694C1C200E227DD /* CameraViewController.swift */; };
+		EE8B22452694C21500E227DD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22442694C21500E227DD /* NotificationsViewController.swift */; };
+		EE8B22472694C27D00E227DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B22462694C27D00E227DD /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		EE8B22302694BCA300E227DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE8B22332694BCA300E227DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8B22352694BCA300E227DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8B22402694C17900E227DD /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		EE8B22422694C1C200E227DD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		EE8B22442694C21500E227DD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		EE8B22462694C27D00E227DD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				EE8B222B2694BC9400E227DD /* HomeViewController.swift */,
+				EE8B22402694C17900E227DD /* ExploreViewController.swift */,
+				EE8B22422694C1C200E227DD /* CameraViewController.swift */,
+				EE8B22442694C21500E227DD /* NotificationsViewController.swift */,
+				EE8B22462694C27D00E227DD /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,7 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8B22412694C17900E227DD /* ExploreViewController.swift in Sources */,
+				EE8B22432694C1C200E227DD /* CameraViewController.swift in Sources */,
 				EE8B222C2694BC9400E227DD /* HomeViewController.swift in Sources */,
+				EE8B22452694C21500E227DD /* NotificationsViewController.swift in Sources */,
+				EE8B22472694C27D00E227DD /* ProfileViewController.swift in Sources */,
 				EE8B22282694BC9400E227DD /* AppDelegate.swift in Sources */,
 				EE8B222A2694BC9400E227DD /* SceneDelegate.swift in Sources */,
 			);
