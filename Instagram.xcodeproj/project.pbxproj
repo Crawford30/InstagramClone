@@ -32,6 +32,7 @@
 		EEF504F0269775AE0065DAF1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504EF269775AE0065DAF1 /* DatabaseManager.swift */; };
 		EEF504F2269777900065DAF1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F1269777900065DAF1 /* AuthManager.swift */; };
 		EEF504F4269778210065DAF1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F3269778210065DAF1 /* StorageManager.swift */; };
+		EEF504F6269785460065DAF1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F5269785460065DAF1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		EEF504EF269775AE0065DAF1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		EEF504F1269777900065DAF1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		EEF504F3269778210065DAF1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		EEF504F5269785460065DAF1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				EEF504EF269775AE0065DAF1 /* DatabaseManager.swift */,
 				EEF504F1269777900065DAF1 /* AuthManager.swift */,
 				EEF504F3269778210065DAF1 /* StorageManager.swift */,
+				EEF504F5269785460065DAF1 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				EE8B22502694C4E200E227DD /* PostViewController.swift in Sources */,
 				EE8B22452694C21500E227DD /* NotificationsViewController.swift in Sources */,
 				EE8B224C2694C3C000E227DD /* LoginViewController.swift in Sources */,
+				EEF504F6269785460065DAF1 /* Extensions.swift in Sources */,
 				EE8B22582694C66F00E227DD /* SearchViewController.swift in Sources */,
 				EE8B22472694C27D00E227DD /* ProfileViewController.swift in Sources */,
 				EEF504F2269777900065DAF1 /* AuthManager.swift in Sources */,
