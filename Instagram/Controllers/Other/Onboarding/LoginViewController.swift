@@ -105,15 +105,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loginButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
-        
-        createAccountButton.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
-        
-        termsButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
-        
-        privacyButton.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
-        
+    
         //Delegates for Textfields when the user taps enter button
         usernameEmailField.delegate = self
         passwordField.delegate = self
@@ -122,6 +114,16 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         view.backgroundColor = .systemBackground
+        
+        
+        
+        loginButton.addTarget(self, action: #selector(didTapLogginButton), for: .touchUpInside)
+        
+        createAccountButton.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
+        
+        termsButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        
+        privacyButton.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
         
         
     }
@@ -245,11 +247,10 @@ class LoginViewController: UIViewController {
     
     //MARK:- Button Functions
     @objc private func didTapLogginButton(){
-        
+        print("Login Button tapped!")
         //When Logged in btn is tapped,,dismiss the Keyboard
         passwordField.resignFirstResponder()
         usernameEmailField.resignFirstResponder()
-        
         
         //check we have text
         guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
@@ -258,11 +259,48 @@ class LoginViewController: UIViewController {
                 return
         }
         
-        //=======Login function===
+        //====Passed to login function ===
+        var username: String?
+        var email: String?
         
+        //=====Figure wether to pass email or username
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            //its email
+            email = usernameEmail
+            
+            print("This is the user email: \(email!)")
+            
+        }else {
+            //username
+            username = usernameEmail
+            print("This is the user name: \(username!)")
+            
+        }
+        
+        //=======Login function===
+        AuthManager.shared.loginUser(username: username, email: email, password: password) {success in
+            //=====The closure should be called on the main thread
+            DispatchQueue.main.async {
+                
+                if success {
+                    //user logged in,, Dismiss the current VC
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    //Error occured, show alert view
+                    let alert = UIAlertController(title: "Login Error", message: "We're unable to log you in!", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
+    
+    
     @objc private func didTapTermsButton(){
+        print("Terms Button tapped!")
         
         guard let url = URL(string: "https://www.instagram.com/about/legal/terms/before-january-19-2013/") else {
             return
@@ -273,8 +311,9 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    
     @objc private func didTapPrivacyButton(){
-        
         guard let url = URL(string: "https://www.elitedaily.com/p/what-is-instagrams-privacy-policy-heres-what-to-know-about-the-apps-rules-18689769") else {
             return
         }
@@ -284,10 +323,12 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    
     @objc private func didTapCreateAccountButton(){
-        
         let vc = RegisterViewController()
-        present(vc, animated: true, completion: nil)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
         
         
     }
@@ -308,7 +349,7 @@ extension LoginViewController: UITextFieldDelegate{
         }
         else if(textField == passwordField){
             
-            didTapTermsButton()
+            didTapLogginButton()
             
         }
         
