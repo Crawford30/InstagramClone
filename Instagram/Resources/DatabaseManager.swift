@@ -23,6 +23,7 @@ public class DatabaseManager{
     //   -email string representing email
     //   -username string representing username
     
+    // MARK: - Create New User
     public func canCreateNewUser(with email: String, username: String, password: String, completion: (Bool) -> Void){
         
         completion(true)
@@ -37,14 +38,16 @@ public class DatabaseManager{
     //-Parameters
     //   -email string representing email
     //   -username string representing username
-    // -completion : Async callback for result if database entry succeeded
+    //   -completion : Async callback for result if database entry succeeded
+    
+    // MARK: - Insert New User To The DB
     public func insertNewUser(with email: String, username:String, completion: @escaping (Bool) -> Void) {
         
 //        databaseRef.child(email).setValue(["username" : username], withCompletionBlock: { error,_  in
 //        })
         
         //Making it with a Trailing clousre syntax
-        databaseRef.child(email.safeDatabaseKey()).setValue(["username" : username]) { error,_  in
+        databaseRef.child(email.safeDatabaseKey()).setValue(["email" : email, "username" : username]) { error,_  in
             
             if error == nil  {
                 //succeeded
