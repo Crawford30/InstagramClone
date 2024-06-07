@@ -125,6 +125,7 @@ class RegisterViewController: UIViewController {
         }
         
         
+        //Create an Account Now
         AuthManager.shared.registerNewUser(username: username, email: email, password: password) { registered in
             
             DispatchQueue.main.async {

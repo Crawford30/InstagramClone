@@ -16,13 +16,14 @@ public class AuthManager{
     
     // MARK: - Public
     
+    
+    //MARK: - REGISTER USER
     public func registerNewUser(username:String, email:String, password: String,completion: @escaping (Bool) -> Void) {
         /*
          - check if  username is avaliable
          - check if email is avalible
          - create account
-         - Insert accoun to databse
-         
+         - Insert account to database
          */
         
         DatabaseManager.shared.canCreateNewUser(with: email, username: username, password: password ){ canCreate in
@@ -33,15 +34,14 @@ public class AuthManager{
                  - Insert accoun to databse
                  */
                 
-                
                 Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                     
                     guard error == nil, result != nil else {
                         //Completion will also be false if we are unable to create an account
-                        //FirebaseAuth coudnot create an account
+                        //FirebaseAuth could not create an account
+                        
                         completion(false)
                         return
-                        
                     }
                     
                     
@@ -62,13 +62,7 @@ public class AuthManager{
                         }
                         
                     }
-                                       
-                    
-                    
-                    
-                    
-                    
-                    
+                            
                 }
             } else{
                 
@@ -78,11 +72,12 @@ public class AuthManager{
             }
         }
         
-        
-        
-        
+    
     }
     
+    
+    
+    //MARK: - LOGIN USER
     public func loginUser(username: String?, email: String?, password: String, completion: @escaping (Bool) ->
         Void) {
         
