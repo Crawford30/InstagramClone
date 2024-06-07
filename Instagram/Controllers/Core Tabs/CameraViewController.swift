@@ -6,17 +6,24 @@
 //  Copyright © 2021 JOEL CRAWFORD. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Hide navbar
+        navigationController?.setToolbarHidden(true, animated: false)
+        
+        didTapPicture()
     }
     
 
    
+    
+    private func didTapPicture() {
+        
+    }
 
 }

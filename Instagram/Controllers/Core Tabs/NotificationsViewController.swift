@@ -22,7 +22,11 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Notifications"
+//        let items = self.tabBarController?.tabBar.items
+//        let tabItem = items![2]
+//        tabItem.title = ""
+        
+        navigationItem.title = "Notifications"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
         
