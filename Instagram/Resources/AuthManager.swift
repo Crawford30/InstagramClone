@@ -106,4 +106,20 @@ public class AuthManager{
     }
     
     
+    //MARK: - LOGOUT USER
+    ///Attempt to logout firebase user
+    public func logoutUser(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+            return
+        
+        } catch {
+            print("An Error Has Occured On Logout")
+            completion(false)
+            return
+        }
+        
+    }
+    
 }
