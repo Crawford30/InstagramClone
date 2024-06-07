@@ -66,6 +66,26 @@ final class SettingsViewController: UIViewController {
     
     //MARK: - Logout User Out
     private func didTapLogout() {
+        AuthManager.shared.logoutUser(completion: {success in
+            
+            DispatchQueue.main.async {
+                if success {
+                    //Present login screen
+                    let loginVC = LoginViewController()
+                    loginVC.modalPresentationStyle = .fullScreen
+                    self.present(loginVC, animated: true, completion: {
+                        //Get out of the settings and switch to main tab
+                        self.navigationController?.popToRootViewController(animated: false)
+                        self.tabBarController?.selectedIndex = 0
+                        
+                    })
+                    
+                }else {
+                    //Something went wrong
+                }
+            }
+           
+        })
         
     }
    

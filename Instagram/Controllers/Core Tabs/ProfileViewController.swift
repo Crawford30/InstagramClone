@@ -12,11 +12,29 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+        
+        configNavigationBar()
     }
     
 
+    
+    private func configNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(didTapSettingsButton))
+    }
+    
+    
+    @objc func didTapSettingsButton() {
+        let vc = SettingsViewController()
+        vc.title = "Settings"
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
    
 
 }
