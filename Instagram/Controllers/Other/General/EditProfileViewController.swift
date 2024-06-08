@@ -8,11 +8,28 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
+final class EditProfileViewController: UIViewController {
+    
+    
+    //Vertical feed
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        
+        //Register the cell
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+       return tableView
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
+        tableView.tableHeaderView = CreateTableHeaderView()
+        tableView.dataSource = self
+        
+        view.addSubview(tableView)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
         
@@ -20,9 +37,43 @@ class EditProfileViewController: UIViewController {
     }
                                                             
     
+    
+    //MARK: - Table View
+    
+    private func CreateTableHeaderView() -> UIView {
+        let tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.height/4).integral) //.integral->rounds up all the values
+        
+        //We wire a UIButton
+        let size = tableHeaderView.height/1.5
+        let profilePhotoButton = UIButton(frame: CGRect(x: (view.width - size)/2, y: (tableHeaderView.height - size)/2, width:size , height: size))
+        
+        tableHeaderView.addSubview(profilePhotoButton)
+        profilePhotoButton.layer.masksToBounds = true
+        profilePhotoButton.tintColor = .label
+        profilePhotoButton.layer.cornerRadius = size/2.0
+        profilePhotoButton.addTarget(self, action: #selector(didTapProfilePhotoButton), for: .touchUpInside)
+        
+        profilePhotoButton.setBackgroundImage(UIImage(systemName: "person.circle"), for: .normal)
+        profilePhotoButton.layer.borderWidth = 1.0
+        profilePhotoButton.layer.borderColor = UIColor.secondarySystemBackground.cgColor
+        
+        
+        return tableHeaderView
+        
+    }
+   
+    
 
-                                                            
-    @objc private func didTapSave(){}
+
+    //MARK: - ACTIONS
+    @objc private func didTapSave(){
+        //Save Info to Database
+        
+    }
+    
+    @objc private func  didTapProfilePhotoButton() {
+        
+    }
     
     @objc private func didTapCancel(){
         self.dismiss(animated: true)
@@ -44,6 +95,34 @@ class EditProfileViewController: UIViewController {
         
         present(actionSheet, animated: true)
     }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
                                                             
    
+}
+
+
+
+//MARK:- TableView
+extension EditProfileViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Hello World"
+        return UITableViewCell()
+    }
+    
+   
+    
+    
 }
