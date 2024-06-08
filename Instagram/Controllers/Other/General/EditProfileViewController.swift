@@ -100,7 +100,7 @@ final class EditProfileViewController: UIViewController {
             sectionTwo.append(model)
         }
         
-        models.append(sectionOne)
+        models.append(sectionTwo)
         
         
         
@@ -108,6 +108,10 @@ final class EditProfileViewController: UIViewController {
     
     @objc private func didTapSave(){
         //Save Info to Database
+        
+        
+        //dsimiss after saving
+        self.dismiss(animated: true)
         
     }
     
