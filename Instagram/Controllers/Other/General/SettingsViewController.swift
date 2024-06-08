@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 struct SettingCellModel {
     let title: String
@@ -50,18 +51,110 @@ final class SettingsViewController: UIViewController {
     
     //MARK: - CONFIGURE MODEL
     private func configureModels() {
-        let section = [
-//            SettingCellModel(title: "Log Out", handler: <#T##(() -> Void)##(() -> Void)##() -> Void#>) since its a last param, we can use trailer closure
-            
-            SettingCellModel(title: "Log Out") { [weak self] in   //weak self , so that it doesnt cause memory leak because we're referencing self
-                self?.didTapLogout()
+        
+        data.append(
+            [
+                SettingCellModel(title: "Edit Profile") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    
+                    self?.didTapEditProfile()
+                    
+                },
                 
-            }
-        ]
-        data.append(section)
+                SettingCellModel(title: "Invite Friends") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    self?.didTapInviteFriends()
+                },
+                
+                SettingCellModel(title: "Save Original Posts") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    self?.didTapSaveOriginalPosts()
+                }
+            ])
+        
+        
+        data.append(
+            [
+                SettingCellModel(title: "Terms Of Service") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    
+                    self?.openURL(type: .terms)
+                },
+                
+                SettingCellModel(title: "Privacy Policy") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    self?.openURL(type: .privacy)
+                },
+                
+                SettingCellModel(title: "Help / Feedback") { [weak self] in   //weak self , so that it doesnt cause memory leak
+                    self?.openURL(type: .help)
+                }
+            ])
+        
+        
+        data.append(
+            [
+    //            SettingCellModel(title: "Log Out", handler: <#T##(() -> Void)##(() -> Void)##() -> Void#>) since its a last param, we can use trailer closure
+                SettingCellModel(title: "Log Out") { [weak self] in   //weak self , so that it doesnt cause memory leak because we're referencing self
+                    self?.didTapLogout()
+                    
+                }
+            ])
+        
+        
+        
+        
+//        let section = [
+////            SettingCellModel(title: "Log Out", handler: <#T##(() -> Void)##(() -> Void)##() -> Void#>) since its a last param, we can use trailer closure
+//
+//            SettingCellModel(title: "Log Out") { [weak self] in   //weak self , so that it doesnt cause memory leak because we're referencing self
+//                self?.didTapLogout()
+//
+//            }
+//        ]
+//        data.append(section)
         
     }
     
+    
+    
+    
+    //MARK: - Edit Profile
+    private func didTapEditProfile() {
+        
+    }
+
+    //MARK: - Invite Friends
+    private func didTapInviteFriends() {
+        
+    }
+
+    
+    //MARK: - Save Original Post
+    private func didTapSaveOriginalPosts() {
+        
+    }
+    
+    enum SettingURLType {
+        case terms, privacy, help
+    }
+
+    
+    //MARK: - Terms, Privacy, Help
+    private func openURL(type: SettingURLType) {
+        let urlString: String
+        switch (type) {
+        case .privacy: urlString = "https://privacycenter.instagram.com/policy"
+        case .terms: urlString = "https://help.instagram.com/581066165581870"
+        case .help: urlString = "https://help.instagram.com"
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
+    }
+
+    
+
 
     
     //MARK: - Logout User Out
@@ -119,6 +212,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.accessoryType = .disclosureIndicator
         
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
         
