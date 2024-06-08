@@ -116,11 +116,17 @@ final class SettingsViewController: UIViewController {
     
     //MARK: - Edit Profile
     private func didTapEditProfile() {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
         
     }
 
     //MARK: - Invite Friends
     private func didTapInviteFriends() {
+        //Show a Share Sheet to edit profile
+        
         
     }
 
