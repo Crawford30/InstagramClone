@@ -33,6 +33,10 @@
 		EEF504F2269777900065DAF1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F1269777900065DAF1 /* AuthManager.swift */; };
 		EEF504F4269778210065DAF1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F3269778210065DAF1 /* StorageManager.swift */; };
 		EEF504F6269785460065DAF1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF504F5269785460065DAF1 /* Extensions.swift */; };
+		FA02D79F2C14354300DFB48B /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D79E2C14354300DFB48B /* IGFeedPostTableViewCell.swift */; };
+		FA02D7A22C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A12C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift */; };
+		FA02D7A42C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A32C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift */; };
+		FA02D7A62C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A52C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		EEF504F1269777900065DAF1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		EEF504F3269778210065DAF1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EEF504F5269785460065DAF1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA02D79E2C14354300DFB48B /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		FA02D7A12C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FA02D7A32C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
+		FA02D7A52C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 		EE8B223C2694BD6200E227DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA02D79D2C1434E900DFB48B /* Cells */,
 				EE8B223F2694BEF500E227DD /* Storyboards */,
 				EE8B22302694BCA300E227DD /* Assets.xcassets */,
 			);
@@ -218,6 +227,25 @@
 				EE8B225D2694C74B00E227DD /* PublishPostViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		FA02D79D2C1434E900DFB48B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D7A02C1437A500DFB48B /* HomeFeed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA02D7A02C1437A500DFB48B /* HomeFeed */ = {
+			isa = PBXGroup;
+			children = (
+				FA02D79E2C14354300DFB48B /* IGFeedPostTableViewCell.swift */,
+				FA02D7A12C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift */,
+				FA02D7A32C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift */,
+				FA02D7A52C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = HomeFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,13 +370,17 @@
 				EE8B22412694C17900E227DD /* ExploreViewController.swift in Sources */,
 				EE8B22432694C1C200E227DD /* CameraViewController.swift in Sources */,
 				EE8B225A2694C69E00E227DD /* SearchResultsViewController.swift in Sources */,
+				FA02D7A42C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift in Sources */,
+				FA02D7A22C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				EE8B225C2694C70600E227DD /* PostEditorViewController.swift in Sources */,
 				EEF504F4269778210065DAF1 /* StorageManager.swift in Sources */,
 				EE8B222C2694BC9400E227DD /* HomeViewController.swift in Sources */,
 				EEF504F0269775AE0065DAF1 /* DatabaseManager.swift in Sources */,
 				EE8B22502694C4E200E227DD /* PostViewController.swift in Sources */,
+				FA02D79F2C14354300DFB48B /* IGFeedPostTableViewCell.swift in Sources */,
 				EE8B22452694C21500E227DD /* NotificationsViewController.swift in Sources */,
 				EE8B224C2694C3C000E227DD /* LoginViewController.swift in Sources */,
+				FA02D7A62C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				EEF504F6269785460065DAF1 /* Extensions.swift in Sources */,
 				EE8B22582694C66F00E227DD /* SearchViewController.swift in Sources */,
 				EE8B22472694C27D00E227DD /* ProfileViewController.swift in Sources */,
