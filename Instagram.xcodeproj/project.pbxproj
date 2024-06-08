@@ -37,6 +37,7 @@
 		FA02D7A22C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A12C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift */; };
 		FA02D7A42C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A32C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift */; };
 		FA02D7A62C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7A52C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift */; };
+		FA02D7BA2C147EAC00DFB48B /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7B92C147EAC00DFB48B /* FormTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		FA02D7A12C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA02D7A32C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
 		FA02D7A52C1438C400DFB48B /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		FA02D7B92C147EAC00DFB48B /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FA02D7A02C1437A500DFB48B /* HomeFeed */,
+				FA02D7B92C147EAC00DFB48B /* FormTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				FA02D7A42C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				FA02D7A22C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				EE8B225C2694C70600E227DD /* PostEditorViewController.swift in Sources */,
+				FA02D7BA2C147EAC00DFB48B /* FormTableViewCell.swift in Sources */,
 				EEF504F4269778210065DAF1 /* StorageManager.swift in Sources */,
 				EE8B222C2694BC9400E227DD /* HomeViewController.swift in Sources */,
 				EEF504F0269775AE0065DAF1 /* DatabaseManager.swift in Sources */,
