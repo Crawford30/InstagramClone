@@ -85,7 +85,15 @@ final class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return 0
+        }
         return 30
     }
     
@@ -94,7 +102,6 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
         
         cell.configure(debug: "test")
         
-       
         return cell
     }
     
@@ -107,13 +114,24 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+        
         guard kind == UICollectionView.elementKindSectionHeader else {
+            
             //footer (tries to fid the footer)
             return UICollectionReusableView()
         }
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier, for: indexPath) as! ProfileInfoHeaderCollectionReusableView
         
-        return header
+        
+        if indexPath.section == 1 {
+            //Which is the tab header
+            let tabControlHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileTabsCollectionReusableView.identifier, for: indexPath) as! ProfileTabsCollectionReusableView
+            return tabControlHeader
+        }
+        
+        
+        let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier, for: indexPath) as! ProfileInfoHeaderCollectionReusableView
+        
+        return profileHeader
     }
     
     
@@ -124,7 +142,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
             return CGSize(width: collectionView.width, height: collectionView.height/3)
         }
         
-        return .zero  //zero width and zero height
+       
+        //Size of section tab
+        return CGSize(width: collectionView.width, height: 65)
     }
     
     

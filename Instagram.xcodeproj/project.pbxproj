@@ -41,6 +41,7 @@
 		FA02D7BD2C14963E00DFB48B /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7BC2C14963E00DFB48B /* PhotoCollectionViewCell.swift */; };
 		FA02D7BF2C1496C000DFB48B /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7BE2C1496C000DFB48B /* ProfileInfoHeaderCollectionReusableView.swift */; };
 		FA02D7C12C14974F00DFB48B /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02D7C02C14974F00DFB48B /* ProfileTabsCollectionReusableView.swift */; };
+		FAD68CC62C3559480040FF87 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD68CC52C3559480040FF87 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		FA02D7BC2C14963E00DFB48B /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA02D7BE2C1496C000DFB48B /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		FA02D7C02C14974F00DFB48B /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
+		FAD68CC52C3559480040FF87 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Instagram/Views/CollectionViewheaders/Models.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		EE8B223D2694BDC600E227DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAD68CC52C3559480040FF87 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				FA02D7A42C14385B00DFB48B /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				FA02D7A22C1437E100DFB48B /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				EE8B225C2694C70600E227DD /* PostEditorViewController.swift in Sources */,
+				FAD68CC62C3559480040FF87 /* Models.swift in Sources */,
 				FA02D7BF2C1496C000DFB48B /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				FA02D7BA2C147EAC00DFB48B /* FormTableViewCell.swift in Sources */,
 				FA02D7C12C14974F00DFB48B /* ProfileTabsCollectionReusableView.swift in Sources */,
