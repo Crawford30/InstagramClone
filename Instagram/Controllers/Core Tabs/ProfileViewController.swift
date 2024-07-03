@@ -105,4 +105,27 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            //footer (tries to fid the footer)
+            return UICollectionReusableView()
+        }
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier, for: indexPath) as! ProfileInfoHeaderCollectionReusableView
+        
+        return header
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        if(section == 0){
+            return CGSize(width: collectionView.width, height: collectionView.height/3)
+        }
+        
+        return .zero  //zero width and zero height
+    }
+    
+    
 }
