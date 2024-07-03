@@ -8,6 +8,8 @@ target 'Instagram' do
   # Pods for Instagram
   #To show app reading prompt
   pod 'Appirater'
+  pod 'SDWebImage'
+
 
   #Firebase
   pod 'Firebase/Core'

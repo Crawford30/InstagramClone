@@ -23,8 +23,11 @@ final class ProfileViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout() //layout allow us to control how things are like scroll direction
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: view.width/3, height: view.width/3) //3 columns
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        let size = (view.width - 4)/3 //-4 means for 3 columns, we have left, middle, right
+        layout.itemSize = CGSize(width: size, height: size) //3 columns
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView?.backgroundColor = .red
@@ -89,7 +92,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as! PhotoCollectionViewCell
         
-        cell.backgroundColor = .systemBlue
+        cell.configure(debug: "test")
+        
+       
         return cell
     }
     
